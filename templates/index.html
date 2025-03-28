@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>FlappyFish</h1>
+        <div id="game-container">
+            <canvas id="game-canvas" width="400" height="600"></canvas>
+            <div id="start-screen">
+                <button id="start-button">Start Game</button>
+                <p>Press Space to jump!</p>
+            </div>
+            <div id="game-over-screen" class="hidden">
+                <h2>Game Over!</h2>
+                <p id="final-score">Score: 0</p>
+                <button id="restart-button">Play Again</button>
+            </div>
+        </div>
+        <div id="score-display">Score: <span id="score">0</span></div>
+    </div>
+    <script src="{{ url_for('static', filename='js/game.js') }}"></script>
+</body>
+</html> 
